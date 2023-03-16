@@ -1,0 +1,6 @@
+* Introduction to TurnBasedRPG
+  The code here is based on the HaxeFlixel [[https://haxeflixel.com/documentation/tutorial/][tutorial]] called
+  TurnBasedRPG.  It has some custom changes.
+
+  Instead of using 'a', 'w', 's', 'd' it uses the right-hand side of
+  the key-board.  So instead it uses 'j', 'i', 'k', 'l' keys.
