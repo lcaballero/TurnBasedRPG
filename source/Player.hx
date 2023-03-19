@@ -5,7 +5,7 @@ import flixel.FlxG;
 
 class Player extends FlxSprite
 {
-  static inline var SPEED:Float = 50;
+  static inline var SPEED:Float = 100;
   var up:Bool = false;
   var down:Bool = false;
   var left:Bool = false;
@@ -14,9 +14,9 @@ class Player extends FlxSprite
   public function new(x:Float = 0, y:Float = 0) {
     super(x,y);
     drag.x = drag.y = 800;
+    loadGraphic(AssetPaths.player__png, true, 16, 16);
     setSize(6, 6);
     offset.set(4, 4);
-    loadGraphic(AssetPaths.player__png, true, 16, 16);
     setFacingFlip(LEFT, false, false);
     setFacingFlip(RIGHT, true, false);
     animation.add("d_idle", [0]);
@@ -40,7 +40,6 @@ class Player extends FlxSprite
     if (left && right) {
       left = right = false;
     }
-    trace("up: " + up + " down: " + down + " left: " + left + " right: " + right);
     var dir:Bool = up || down || left || right;
     if (!dir) {
       return;

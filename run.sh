@@ -20,5 +20,9 @@ build() {
     lime build html5 && lime run html5 -v
 }
 
+debug() {
+    lime build html5 && lime test html5 -v -debug
+}
+
 "$@"
 
